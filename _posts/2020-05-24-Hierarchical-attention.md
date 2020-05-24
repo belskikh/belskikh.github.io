@@ -8,7 +8,7 @@ New SOTA on Cityscapes and Mapillary Vistas on semantic segmentation from NVIDIA
 
 The authors draw attention to the fact that the neural net predictions on a different scale have different quality labels in different details. They call it a class confusion. Although the standard logit averaging scheme works in general, it is obviously not ideal because both good and bad predictions are mixed up.
 
-![image.png](images/HIERARCHICAL%20MULTI%20SCALE%20ATTENTION%20FOR%20SEMANTIC%20SE%204620ce37532b4337851fc24423c2c7ab/image.png)
+![image.png](images/image.png)
 
 It is a good idea to learn the attention map for each scale, so that the equilibrated sum (average) becomes weighted with the learned coefficients.
 
@@ -18,20 +18,20 @@ The authors called this approach Hierarchical multi-scale attention, it increase
 
 During the inference, you can combine as many scales as you want, consistently feeding the model images of increasing size, combining them by the predicted mask.
 
-![image.png](images/HIERARCHICAL%20MULTI%20SCALE%20ATTENTION%20FOR%20SEMANTIC%20SE%204620ce37532b4337851fc24423c2c7ab/image%201.png)
+![image.png](images/image%201.png)
 
-![image.png](images/HIERARCHICAL%20MULTI%20SCALE%20ATTENTION%20FOR%20SEMANTIC%20SE%204620ce37532b4337851fc24423c2c7ab/image%202.png)
+![image.png](images/image%202.png)
 
 In addition, the authors used auto-labeling, labeling a part of Cituscapes with coarse labels. They used hard labels because soft labels take up too much disk space and the training pipelining slow down on IO operations.
 
-![image.png](images/HIERARCHICAL%20MULTI%20SCALE%20ATTENTION%20FOR%20SEMANTIC%20SE%204620ce37532b4337851fc24423c2c7ab/image%203.png)
+![image.png](images/image%203.png)
 
 In the experiments we used ResNet50 and HRNet-OCR encoders (SOTA results were obtained on it), and the decoder was taken from DeepLabV3+.
 
 The training was carried out on 2-4 DGX nodes (8xV100), 1 image per GPU at a resolution of 1024 pixels on the smaller side.
 
-![image.png](images/HIERARCHICAL%20MULTI%20SCALE%20ATTENTION%20FOR%20SEMANTIC%20SE%204620ce37532b4337851fc24423c2c7ab/image%204.png)
+![image.png](images/image%204.png)
 
-![image.png](images/HIERARCHICAL%20MULTI%20SCALE%20ATTENTION%20FOR%20SEMANTIC%20SE%204620ce37532b4337851fc24423c2c7ab/image%205.png)
+![image.png](images/image%205.png)
 
-![image.png](images/HIERARCHICAL%20MULTI%20SCALE%20ATTENTION%20FOR%20SEMANTIC%20SE%204620ce37532b4337851fc24423c2c7ab/image%206.png)
+![image.png](images/image%206.png)
