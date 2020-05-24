@@ -1,8 +1,8 @@
-# HIERARCHICAL MULTI-SCALE ATTENTION FOR SEMANTIC SEGMENTATION
+# Hierarchical Multi-Scale Attention for Semantic Segmentation
 
 New SOTA on Cityscapes and Mapillary Vistas on semantic segmentation from NVIDIA, based on a new mechanism for mixing multi-scale predictions through attention, as well as on the auto labeling of poorly marked parts of the dataset.
 
-**HIERARCHICAL MULTI-SCALE ATTENTION FOR SEMANTIC SEGMENTATION**
+**Hierarchical Multi-Scale Attention for Semantic Segmentation**
 
 [https://arxiv.org/abs/2005.10821](https://arxiv.org/abs/2005.10821)
 
