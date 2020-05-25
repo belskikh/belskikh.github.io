@@ -1,4 +1,8 @@
 # About
 
-This is where you put the contents of your *About* page. Like all your pages, it's in [Markdown](https://guides.github.com/features/mastering-markdown/) format.
+My name is Aleksandr Belskikh, I am a Deep Learning Engineer / Team Lead.
+
+Here are some links to my social network accounts:
+- https://www.linkedin.com/in/belskikh/
+- https://www.facebook.com/blskkh
 
