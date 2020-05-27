@@ -1,1 +1,1 @@
-{%  include 2020-05-27-SuperGlue    %}
+{%  include 2020-05-27-SuperGlue.html    %}
