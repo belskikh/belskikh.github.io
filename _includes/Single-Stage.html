@@ -1,0 +1,559 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><style>
+/* webkit printing magic: print all background colors */
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "Songti TC", "Songti SC", "SimSun", "Nanum Myeongjo", NanumMyeongjo, Batang, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR'; }
+
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR'; }
+
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "Songti TC", "Songti SC", "SimSun", "Nanum Myeongjo", NanumMyeongjo, Batang, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR'; }
+
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR'; }
+
+.highlight-default {
+}
+.highlight-gray {
+	color: rgb(155,154,151);
+}
+.highlight-brown {
+	color: rgb(100,71,58);
+}
+.highlight-orange {
+	color: rgb(217,115,13);
+}
+.highlight-yellow {
+	color: rgb(223,171,1);
+}
+.highlight-teal {
+	color: rgb(15,123,108);
+}
+.highlight-blue {
+	color: rgb(11,110,153);
+}
+.highlight-purple {
+	color: rgb(105,64,165);
+}
+.highlight-pink {
+	color: rgb(173,26,114);
+}
+.highlight-red {
+	color: rgb(224,62,62);
+}
+.highlight-gray_background {
+	background: rgb(235,236,237);
+}
+.highlight-brown_background {
+	background: rgb(233,229,227);
+}
+.highlight-orange_background {
+	background: rgb(250,235,221);
+}
+.highlight-yellow_background {
+	background: rgb(251,243,219);
+}
+.highlight-teal_background {
+	background: rgb(221,237,234);
+}
+.highlight-blue_background {
+	background: rgb(221,235,241);
+}
+.highlight-purple_background {
+	background: rgb(234,228,242);
+}
+.highlight-pink_background {
+	background: rgb(244,223,235);
+}
+.highlight-red_background {
+	background: rgb(251,228,228);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(55, 53, 47, 0.6);
+	fill: rgba(55, 53, 47, 0.6);
+}
+.block-color-brown {
+	color: rgb(100,71,58);
+	fill: rgb(100,71,58);
+}
+.block-color-orange {
+	color: rgb(217,115,13);
+	fill: rgb(217,115,13);
+}
+.block-color-yellow {
+	color: rgb(223,171,1);
+	fill: rgb(223,171,1);
+}
+.block-color-teal {
+	color: rgb(15,123,108);
+	fill: rgb(15,123,108);
+}
+.block-color-blue {
+	color: rgb(11,110,153);
+	fill: rgb(11,110,153);
+}
+.block-color-purple {
+	color: rgb(105,64,165);
+	fill: rgb(105,64,165);
+}
+.block-color-pink {
+	color: rgb(173,26,114);
+	fill: rgb(173,26,114);
+}
+.block-color-red {
+	color: rgb(224,62,62);
+	fill: rgb(224,62,62);
+}
+.block-color-gray_background {
+	background: rgb(235,236,237);
+}
+.block-color-brown_background {
+	background: rgb(233,229,227);
+}
+.block-color-orange_background {
+	background: rgb(250,235,221);
+}
+.block-color-yellow_background {
+	background: rgb(251,243,219);
+}
+.block-color-teal_background {
+	background: rgb(221,237,234);
+}
+.block-color-blue_background {
+	background: rgb(221,235,241);
+}
+.block-color-purple_background {
+	background: rgb(234,228,242);
+}
+.block-color-pink_background {
+	background: rgb(244,223,235);
+}
+.block-color-red_background {
+	background: rgb(251,228,228);
+}
+.select-value-color-default { background-color: rgba(206,205,202,0.5); }
+.select-value-color-gray { background-color: rgba(155,154,151, 0.4); }
+.select-value-color-brown { background-color: rgba(140,46,0,0.2); }
+.select-value-color-orange { background-color: rgba(245,93,0,0.2); }
+.select-value-color-yellow { background-color: rgba(233,168,0,0.2); }
+.select-value-color-green { background-color: rgba(0,135,107,0.2); }
+.select-value-color-blue { background-color: rgba(0,120,223,0.2); }
+.select-value-color-purple { background-color: rgba(103,36,222,0.2); }
+.select-value-color-pink { background-color: rgba(221,0,129,0.2); }
+.select-value-color-red { background-color: rgba(255,0,26,0.2); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="6e780067-4918-48a5-9e76-52f2efb6aa7b" class="page sans"><div class="page-body"><p id="f74a18ea-e4d5-43e8-b05f-c7fd84c68929" class="">New work on weakly supervised semantic segmentation, in which only class labels are used to obtain segmentation maps. It is easy enough to learn, shows either equal to or better than the current state of the art.</p><p id="fd4e50ec-733b-4caf-85d8-1e83c54f0885" class=""><strong>Single-Stage Semantic Segmentation from Image Labels</strong></p><p id="a0a671d8-9770-415a-b85c-45d5744641b5" class=""><a href="https://arxiv.org/abs/2005.08104">https://arxiv.org/abs/2005.08104</a></p><p id="9867c268-0b11-4b07-8fb9-4a6d69c412e1" class=""><a href="https://github.com/visinf/1-stage-wseg">https://github.com/visinf/1-stage-wseg</a></p><div id="bf2a1c91-466b-4fdf-8d0e-e8a48f35a362" class="column-list"><div id="a556978d-c948-4054-a1bc-804409ed4b49" style="width:37.5%" class="column"><figure id="9afb17fd-b6e2-4eb0-a15a-b2fec37113f0" class="image"><a href="/images/Single%20Stage%20Semantic%20Segmentation%20from%20Image%20Labe%209afb17fdb6e24eb0a15ab2fec37113f0/Untitled.png"><img style="width:1080px" src="/images/Single%20Stage%20Semantic%20Segmentation%20from%20Image%20Labe%209afb17fdb6e24eb0a15ab2fec37113f0/Untitled.png"/></a></figure><p id="cec96b90-095c-4d62-8dcb-2ca8a252d568" class="">
+</p></div><div id="888a6b69-fae7-41bd-bc73-31f4c143df73" style="width:62.5%" class="column"><figure id="f2cc4b2d-12e1-4f2e-a2cf-1b32b7239b75" class="image"><a href="/images/Single%20Stage%20Semantic%20Segmentation%20from%20Image%20Labe%209afb17fdb6e24eb0a15ab2fec37113f0/Untitled%201.png"><img style="width:1280px" src="/images/Single%20Stage%20Semantic%20Segmentation%20from%20Image%20Labe%209afb17fdb6e24eb0a15ab2fec37113f0/Untitled%201.png"/></a></figure></div></div><p id="fc9cf3fe-fafa-4295-9e3a-c06905bde253" class="">The architecture is based on three innovations:</p><ul id="f0383249-2fd3-454a-98c5-66f8a58c9999" class="bulleted-list"><li>the normalized Global Weighted Pooling, which allows classification loss to be calculated simultaneously with segmentation training.</li></ul><ul id="7d81d999-3f51-43cb-be02-3befe3b5c36b" class="bulleted-list"><li>Pixel-Adaptive Mask Refinement - a non-trainable module that iteratively improves the predicted masks by improving their consistency. These masks are further used as pseudo-labels for segmentation.</li></ul><ul id="23aaa1b1-b875-43d7-bad0-0b218aaeae04" class="bulleted-list"><li>Stochastic Gate regulation technique, which is the random mix of features from different network layers with different receptive fields.</li></ul><p id="5f6ff888-e4be-4dd6-889e-308666e11a23" class="">The whole model is a standard encoder-decoder segmentation network, at the output of which each pixel is assigned a certain classification score. From this score map is obtained through a normalized global Weighted Pooling prediction of classification, as well as the segmentation masks themselves, which are then improved through Pixel-Adaptive Mask Refinement. As an additional regularization, the Stochastic Gate is used.</p><ol id="d8d6a2a6-d819-456b-82a5-81f7688011ea" class="numbered-list" start="1"><li>normalized global Weighted Pooling</li></ol><p id="59e067d2-ee25-4006-8561-e2d47479a4c0" class="">This is a modification of the Global Average Pooling, which consists in the following: the weights of each pixel (mask) are obtained from the output segmentation tensor through softmax and used for weighted averaging in order to get the final vector of features, which will be used for classification. In addition, the obtained masks are overlaid with focal loss.</p><div id="1fd77b21-6ccd-4e91-931b-b7712f5e0469" class="column-list"><div id="2fd9b8b3-d022-475d-abe4-dca440563573" style="width:62.5%" class="column"><figure id="e2bab097-ae46-4e48-818d-dab1cea4e5ec" class="image"><a href="/images/Single%20Stage%20Semantic%20Segmentation%20from%20Image%20Labe%209afb17fdb6e24eb0a15ab2fec37113f0/Untitled%202.png"><img style="width:1280px" src="/images/Single%20Stage%20Semantic%20Segmentation%20from%20Image%20Labe%209afb17fdb6e24eb0a15ab2fec37113f0/Untitled%202.png"/></a></figure></div><div id="9b79606a-0859-4f11-88bb-0a087abf3a2f" style="width:37.5%" class="column"><figure id="045f8b3b-c8f0-49f9-85c8-d627a6a622d9" class="image"><a href="/images/Single%20Stage%20Semantic%20Segmentation%20from%20Image%20Labe%209afb17fdb6e24eb0a15ab2fec37113f0/Untitled%203.png"><img style="width:1117px" src="/images/Single%20Stage%20Semantic%20Segmentation%20from%20Image%20Labe%209afb17fdb6e24eb0a15ab2fec37113f0/Untitled%203.png"/></a></figure><p id="79da013a-6b22-4a5c-a3ae-7d568edcd452" class="">
+</p></div></div><ol id="56214862-e261-47ae-9077-c309b1f26ab4" class="numbered-list" start="1"><li>Pixel-adaptive mask refinement</li></ol><p id="0a71db08-8e2d-4f5e-b78f-5c93a9f05ad5" class="">The idea of this layer is that the resulting semantic mask iteratively updates the values of each pixel using a convex combination of adjacent pixels. This is done in order to ensure the local consistency property - the neighboring equally-looking areas must belong to the same class.</p><p id="26a8efbb-8707-4d1c-a328-e74f6400a51e" class="">The output of this layer is used as a pseudo ground truth mask to add a segmentation loss to training.</p><p id="6d77808b-dba4-423d-9e65-9cb5b65275aa" class=""> </p><div id="ece2abf3-b8c7-4333-8a27-b055ae48df7c" class="column-list"><div id="22ff3e38-f15f-4080-80e3-8f22b93b01fa" style="width:56.25%" class="column"><figure id="12b72226-71aa-4bf4-b671-c1984f8ea90f" class="image"><a href="/images/Single%20Stage%20Semantic%20Segmentation%20from%20Image%20Labe%209afb17fdb6e24eb0a15ab2fec37113f0/Untitled%204.png"><img style="width:1280px" src="/images/Single%20Stage%20Semantic%20Segmentation%20from%20Image%20Labe%209afb17fdb6e24eb0a15ab2fec37113f0/Untitled%204.png"/></a></figure></div><div id="6a5ff2f0-657d-41b9-84ba-9958c96ed779" style="width:43.75%" class="column"><figure id="c95bbd73-5813-4da0-8a23-ab32727eeafd" class="image"><a href="/images/Single%20Stage%20Semantic%20Segmentation%20from%20Image%20Labe%209afb17fdb6e24eb0a15ab2fec37113f0/Untitled%205.png"><img style="width:1280px" src="/images/Single%20Stage%20Semantic%20Segmentation%20from%20Image%20Labe%209afb17fdb6e24eb0a15ab2fec37113f0/Untitled%205.png"/></a></figure></div></div><ol id="0fc5b243-8c51-4825-807e-877b17e151af" class="numbered-list" start="1"><li>Stochastic Gate</li></ol><p id="12013d29-58d8-4cc4-80ac-4021a1a3853a" class="">In self-supervised learning, it is expected that the model will average inaccuracies in psedo ground truth, but the model of a large capacity may accumulate errors on the contrary. It was found that it is the large receptive field of deep feature maps that leads the model to this behavior.</p><p id="3ce9754c-f29f-4c93-a86d-d11306ee3c50" class="">That&#x27;s why the authors offer a mechanism of mixing features from different levels in a random mode. The mixing ratio is sampled from Bernoulli&#x27;s distribution in a similar way to Dropout. Preliminarily each feature map is prepared through several convolution layers.</p><figure id="50efa8c5-0c6e-4802-a0cc-df6f9204fe2d" class="image"><a href="/images/Single%20Stage%20Semantic%20Segmentation%20from%20Image%20Labe%209afb17fdb6e24eb0a15ab2fec37113f0/Untitled%206.png"><img style="width:432px" src="/images/Single%20Stage%20Semantic%20Segmentation%20from%20Image%20Labe%209afb17fdb6e24eb0a15ab2fec37113f0/Untitled%206.png"/></a></figure><p id="b02320fc-976c-488b-8eb3-e4096529ff70" class="">The result is similar or superior to state of the art results. Only class labels are used.</p><p id="a9f33519-7ed6-43ee-be57-0c352aaa553b" class="">
+</p><div id="3f47668a-cbe6-41d1-84de-beec3ea86ece" class="column-list"><div id="b2ae72ba-e25b-4294-8ca4-54e0a0185fe7" style="width:25%" class="column"><figure id="14d54a86-2005-4928-ba84-cf352b186131" class="image"><a href="/images/Single%20Stage%20Semantic%20Segmentation%20from%20Image%20Labe%209afb17fdb6e24eb0a15ab2fec37113f0/Untitled%207.png"><img style="width:814px" src="/images/Single%20Stage%20Semantic%20Segmentation%20from%20Image%20Labe%209afb17fdb6e24eb0a15ab2fec37113f0/Untitled%207.png"/></a></figure></div><div id="3f2ea8f5-00e1-428d-b252-2b6f18aead50" style="width:75%" class="column"><figure id="5eaf4b96-bbaa-41c8-b1a7-0ee7964fcbc3" class="image"><a href="/images/Single%20Stage%20Semantic%20Segmentation%20from%20Image%20Labe%209afb17fdb6e24eb0a15ab2fec37113f0/Untitled%208.png"><img style="width:1280px" src="/images/Single%20Stage%20Semantic%20Segmentation%20from%20Image%20Labe%209afb17fdb6e24eb0a15ab2fec37113f0/Untitled%208.png"/></a></figure></div></div><p id="1146a1df-0f72-435a-adbd-cc69ee9d1845" class="">
+</p></div></article></body></html>
