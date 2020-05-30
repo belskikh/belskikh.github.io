@@ -8,3 +8,6 @@ _site
 vendor
 _notebooks/.ipynb_checkpoints
 .DS_Store
+.vscode
+*.pyc
+__pycache__
