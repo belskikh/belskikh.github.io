@@ -49,11 +49,11 @@ def main(f, out_dir="/Users/belskikh/projects/belskikh.github.io/"):
     mdfile = out_dir / "_posts" / f"{f.stem}-{name.lower()}.md"
 
     md_content = f'''---
-    layout: post
-    title:  "{title}"
-    ---
-    {"{%"}\tinclude {target_html.name}\t{"%}"}
-    '''
+layout: post
+title:  "{title}"
+---
+{"{%"}\tinclude {target_html.name}\t{"%}"}
+'''
 
     with mdfile.open("w") as mf:
         mf.write(md_content)
