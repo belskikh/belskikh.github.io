@@ -6,7 +6,7 @@ from zipfile import ZipFile
 import fire
 
 
-def main(f, out_dir="/Users/belskikh/projects/belskikh.github.io/"):
+def main(f, out_dir):
     f = Path(f)
     out_dir = Path(out_dir)
 
